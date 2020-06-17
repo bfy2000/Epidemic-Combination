@@ -128,17 +128,9 @@ class User extends Component {
         if(this.state.flag === 1){
             return (
                 <div>
-                    <Title></Title>
-                    <UserSelect Info = {this.Info} Change = {this.Change} Comment = {this.Comment} Application = {this.Application}></UserSelect>
                     <div className = "User">
                         <div id = "UserName">
                             {this.state.username}
-                        </div>
-                        <div id = "Type">
-                            注册用户
-                            <button onClick = {this.Out}>
-                                登出
-                            </button>
                         </div>
                         <div id = "Info">
                             <a>

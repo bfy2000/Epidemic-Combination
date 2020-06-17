@@ -5,6 +5,7 @@ import UserSelect from './UserSelect';
 import '../../asserts/css/Change.css'
 import {backendUrl} from "./Common";
 import cookie from 'react-cookies'
+import {Button} from 'antd';
 
 var used = {};
 
@@ -174,20 +175,18 @@ class User extends Component {
         if(this.state.flag === 2){
             return (
                 <div>
-                    <Title></Title>
-                    <UserSelect Info = {this.Info} Change = {this.Change} Comment = {this.Comment} Application = {this.Application}></UserSelect>
                     <div className = "Change">
                         <form>
                             <input type = "text" placeholder = {this.state.name} ref = "name" onChange = {(e)=>this.GetUsername(e)}></input>
                             <input type = "text" placeholder = {this.state.email} ref = "email" onChange = {(e)=>this.GetEmail(e)}></input>
                             <input type = "text" placeholder = {this.state.phone} ref = "phone" onChange = {(e)=>this.GetPhone(e)}></input>
+                            <Button type = "default" style = {{marginLeft:8}} onClick = {this.ChangePassword}>
+                                修改密码
+                            </Button>
                         </form>
-                        <button onClick = {this.ChangePassword}>
-                            修改密码
-                        </button>
-                        <button onClick = {this.Submit}>
+                        <Button type = "primary" style = {{marginLeft:8}} onClick = {this.Submit} size = "large">
                             提交
-                        </button>
+                        </Button>
                     </div>
                 </div>
             );
