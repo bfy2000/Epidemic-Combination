@@ -22,6 +22,10 @@ class RealCreate extends Component {
             .then(res => res.json())
             .then((tokenresult)=>{
                 console.log(tokenresult);
+                alert(tokenresult.message);
+                if(tokenresult.isSuccess){
+
+                }
                 this.setState({
                 })
             },

@@ -120,15 +120,19 @@ def OnRegisterMailConfirmed(request: HttpRequest):
     msg = ""
     data = json.loads(request.body)
     token = data['token']
-    user: models.UserInfo = ParseVerifyEmailURL(token)
+    user, appendix = ParseVerifyEmailURL(token)
     if user is None:
         msg = "这个链接不合法或已经失效，请重新进行邮箱验证"
         return StateJsonRes(False, msg)
     else:
-        user.is_active = True
-        user.save()
-        msg = "您的账号已成功激活！"
-        return StateJsonRes(True, msg)
+        if user.is_active == False:
+            user.is_active = True
+            user.save()
+            msg = "您的账号已成功激活！"
+            return StateJsonRes(True, msg)
+        else:
+            msg = "您的账号已经是可用状态，无需激活！"
+            return StateJsonRes(True, msg)
 
 
 # 点击登录时 跳转到登录页面
@@ -261,7 +265,7 @@ def OnModifyProfilePosted(request: HttpRequest):
     user = None
     # try:
     #     username = request.user.username
-    user = GetUserFromRequestSession(request)
+    user : models.UserInfo = GetUserFromRequestSession(request)
     if user is None:
         msg = "用户不存在"
         return StateJsonRes(False, msg)
@@ -375,7 +379,7 @@ def OnChangePassMailConfirmed(request: HttpRequest):
         # new_token = GenerateVerifyTokenURL(user, 1200)
         if new_pass is None:
             msg = "未获取到密码信息"
-            return StateJsonRes(False,msg)
+            return StateJsonRes(False, msg)
         try:
             user.set_password(new_pass)
             user.save()

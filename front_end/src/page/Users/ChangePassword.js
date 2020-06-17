@@ -43,11 +43,12 @@ class ChangePassword extends Component {
             })
                 .then(res => res.json())
                 .then((result)=>{
-                    if(result.isSuccess){
-                        alert("更改成功");
-                    }else{
-                        alert("更改失败");
-                    }
+                    alert(result.message);
+                    // if(result.isSuccess){
+                    //     alert("更改成功");
+                    // }else{
+                    //     alert("更改失败");
+                    // }
                 },
             (error)=>{
                 console.log(error);

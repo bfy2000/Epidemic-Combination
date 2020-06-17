@@ -24,6 +24,10 @@ class RealChange extends Component {
         })
             .then(res => res.json())
             .then((tokenresult)=>{
+                alert(tokenresult.message);
+                if(tokenresult.isSuccess){
+
+                }
                 this.setState({
                 })
             },
