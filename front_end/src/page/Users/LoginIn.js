@@ -7,6 +7,10 @@ import Title from './Title';
 import {backendUrl} from "./Common";
 import cookie from 'react-cookies'
 import Body from './Body';
+import { Button } from 'antd';
+import Navi from '../../components/Menu/Navigator';
+import Logo from '../../asserts/logo.jpg';
+import '../../components/Menu/Menu.css';
 var storage=window.localStorage;
 
 class LoginIn extends Component {
@@ -80,7 +84,11 @@ class LoginIn extends Component {
         if(this.state.flag === 1){
             return (
                 <div>
-                    <Title></Title>
+                    <div className = "header">
+                        <img class = "logo" src = {Logo} alt="校徽" />
+                        <div class ="title"> 疫情管控系统 </div>
+                        <div style = {{alignSelf:'flex-end'}}> <Navi /> </div>
+                    </div>
                     <div className = "Logo_Login" style={{float:'left'}}>
                         <Body></Body>
                     </div>
@@ -97,14 +105,14 @@ class LoginIn extends Component {
                                 </div>
                             </form>
                             <div>
-                                <button onClick = {this.AppData}>
+                                <Button onClick = {this.AppData} type = "primary">
                                     登录
-                                </button>
+                                </Button>
                             </div>
                             <div>
-                                <button onClick = {this.Back}>
+                                <Button onClick = {this.Back} type = "primary">
                                     返回
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     </div>

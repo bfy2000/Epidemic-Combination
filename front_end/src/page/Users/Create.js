@@ -6,6 +6,10 @@ import '../../asserts/css/Info.css';
 import Title from './Title'
 import {backendUrl} from "./Common";
 import cookie from 'react-cookies'
+import { Button } from 'antd';
+import Navi from '../../components/Menu/Navigator';
+import Logo from '../../asserts/logo.jpg';
+import '../../components/Menu/Menu.css';
 
 class Create extends Component {
     constructor(props) {
@@ -167,7 +171,11 @@ class Create extends Component {
         if(this.state.flag === 2){
             return (
                 <div>
-                    <Title></Title>
+                    <div className = "header">
+                        <img class = "logo" src = {Logo} alt="校徽" />
+                        <div class ="title"> 疫情管控系统 </div>
+                        <div style = {{alignSelf:'flex-end'}}> <Navi /> </div>
+                    </div>
                     <div className = "Info_Create" style={{float:'left'}}>
                         <div>
                             <form>

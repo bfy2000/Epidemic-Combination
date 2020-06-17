@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import {backendUrl} from "./Common";
 import cookie from 'react-cookies'
+import { BrowserRouter as Router, Route ,Redirect } from 'react-router-dom';
 
 class RealChange extends Component {
     constructor(props) {
         super(props);
         this.state = {
             token:"",
+            flag:0,
         };
     }
 
@@ -26,10 +28,10 @@ class RealChange extends Component {
             .then((tokenresult)=>{
                 alert(tokenresult.message);
                 if(tokenresult.isSuccess){
-
+                    this.setState({
+                        flag:1,
+                    })
                 }
-                this.setState({
-                })
             },
         (error)=>{
             console.log(error);
@@ -37,11 +39,15 @@ class RealChange extends Component {
     }
 
     render() {
-        return (
-            <div>
-                
-            </div>
-        );
+        if(this.state.flag === 0){
+            return (
+                <div>
+                    
+                </div>
+            );
+        }else{
+            return <Redirect to = {{pathname:'/ESS/situation'}} />
+        }
     }
 }
 

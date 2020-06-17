@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {backendUrl} from "./Common";
+import { BrowserRouter as Router, Route ,Redirect } from 'react-router-dom';
 import cookie from 'react-cookies'
 
 class RealCreate extends Component {
@@ -7,6 +8,7 @@ class RealCreate extends Component {
         super(props);
         this.state = {
             token:"",
+            flag:0,
         };
     }
 
@@ -24,10 +26,11 @@ class RealCreate extends Component {
                 console.log(tokenresult);
                 alert(tokenresult.message);
                 if(tokenresult.isSuccess){
-
+                    this.setState({
+                        flag:1,
+                    })
                 }
-                this.setState({
-                })
+                
             },
         (error)=>{
             console.log(error);
@@ -35,11 +38,16 @@ class RealCreate extends Component {
     }
 
     render() {
-        return (
-            <div>
-                
-            </div>
-        );
+        if(this.state.flag === 0){
+            return (
+                <div>
+                    
+                </div>
+            );
+        }else{
+            return <Redirect to = {{pathname:'/ESS/situation'}} />
+        }
+        
     }
 }
 
