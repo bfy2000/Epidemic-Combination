@@ -2,8 +2,8 @@ class DatabaseAppsRouter(object):
     db_app_map = {
         'Group07': 'db1',
         'Group08': '数据库别名1',
-        'Group06.users': 'db_g6',
-        'Group06.news': 'db_g6',
+        'users': 'default',
+        'news': 'default',
         'app名2': '数据库别名2'
     }
 
