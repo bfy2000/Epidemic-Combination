@@ -79,7 +79,7 @@ class ChangePassword extends Component {
                 </div>
             );
         }else{
-            return <Redirect to = {{pathname:'/User/Change'}} />
+            return <Redirect to = {{pathname:'/ESS/background/ChangeInfo'}} />
         }
     }
 }

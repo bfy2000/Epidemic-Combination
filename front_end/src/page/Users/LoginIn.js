@@ -59,7 +59,9 @@ class LoginIn extends Component {
                     this.setState({
                         flag : 3,
                     })
-            }
+                }else{
+                    alert("用户名和密码错误");
+                }
                
             },
         (error)=>{

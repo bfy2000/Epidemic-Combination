@@ -43,8 +43,6 @@ class Comment extends Component {
         if(this.state.flag === 3){
             return (
                 <div>
-                    <Title></Title>
-                    <UserSelect Info = {this.Info} Change = {this.Change} Comment = {this.Comment} Application = {this.Application}></UserSelect>
                     <div className = "Comment">
                         123
                     </div>
