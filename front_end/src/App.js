@@ -36,7 +36,6 @@ class App extends Component {
 					<Route path="/adminlogin" component={AdminLogin} />
 					<Route path="/home" component={HomeIndex} />
 					<Route path="/adminhome" component={AdminHomeIndex} />
-
 					<Route exact path = '/LoginIn' component = {LoginIn}/>
 					<Route exact path = "/Create" component = {Create}/>
 					<Route path = "/ESS" component = {Main}/>
