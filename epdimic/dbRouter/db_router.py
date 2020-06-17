@@ -3,7 +3,7 @@ class DatabaseAppsRouter(object):
         'Group07': 'db1',
         'Group08': '数据库别名1',
         'users': 'default',
-        'news': 'default',
+        'news': 'db_g6',
         'app名2': '数据库别名2'
     }
 
