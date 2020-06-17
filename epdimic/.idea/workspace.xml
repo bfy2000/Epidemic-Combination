@@ -79,14 +79,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="epdimic.settings" />
       </envs>
-      <option name="SDK_HOME" value="E:\vs\疫情管理系统\汇总\doggy\EpidemicInfoMgr_Backend-master\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="" />
+      <option name="host" value="127.0.0.1" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
@@ -107,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1592382568877</updated>
       <workItem from="1592382576762" duration="6900000" />
-      <workItem from="1592391937595" duration="8118000" />
+      <workItem from="1592391937595" duration="9876000" />
     </task>
     <servers />
   </component>
@@ -132,10 +132,10 @@
     </state>
     <state x="140" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1592383098868" />
     <state x="2077" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1536.864@1920.0.1536.864" timestamp="1592396726193" />
-    <state x="362" y="20" key="#epdimic" timestamp="1592386935749">
+    <state x="362" y="20" key="#epdimic" timestamp="1592403106561">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="362" y="20" key="#epdimic/0.0.1368.872@0.0.1368.872" timestamp="1592386935749" />
+    <state x="362" y="20" key="#epdimic/0.0.1368.872@0.0.1368.872" timestamp="1592403106561" />
     <state x="523" y="186" width="479" height="503" key="EnvironmentVariablesDialog" timestamp="1592383190676">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -144,22 +144,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="444" y="193" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1592383203663" />
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1592399676832">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1592404472709">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1592399676832" />
-    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1592399676832">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1592404472709" />
+    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1592404472709">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1592399676832" />
-    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1592399676832">
+    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1592404472709" />
+    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1592404472709">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1592399676832" />
-    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1592399676832">
+    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1592404472709" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1592404472709">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1592399676832" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1592404472709" />
     <state x="41" y="55" key="SettingsEditor" timestamp="1592383557646">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
