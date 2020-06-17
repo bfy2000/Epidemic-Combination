@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route ,Redirect } from 'react-router-dom';
-import '.../asserts/css/UserSelect.css'
+import '../../asserts/css/UserSelect.css'
 
 class UserSelect extends Component {
     constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import '.../asserts/css/Header.css';
-import ZjuLogo from '../asserts/image/timgXFIKOJKO.png';
+import '../../asserts/css/Header.css';
+import ZjuLogo from '../../asserts/image/timgXFIKOJKO.png';
 import {backendUrl, setCookie} from "./Common";
 import cookie from 'react-cookies'
 

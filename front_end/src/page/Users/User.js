@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route ,Redirect } from 'react-router-dom';
-import '.../asserts/css/User.css'
+import '../../asserts/css/User.css'
 import Title from './Title';
 import UserSelect from './UserSelect';
 import {backendUrl, setCookie} from "./Common";

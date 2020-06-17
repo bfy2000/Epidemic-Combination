@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Title from './Title';
 import { Redirect } from 'react-router-dom';
 import UserSelect from './UserSelect';
-import '.../asserts/css/Comment.css'
+import '../../asserts/css/Comment.css'
 
 
 class Comment extends Component {

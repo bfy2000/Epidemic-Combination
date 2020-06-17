@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route ,Redirect } from 'react-router-dom';
 import Title from './Title';
 import UserSelect from './UserSelect';
-import '.../asserts/css/Change.css'
+import '../../asserts/css/Change.css'
 import {backendUrl} from "./Common";
 import cookie from 'react-cookies'
 

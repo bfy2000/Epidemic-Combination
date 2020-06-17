@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route ,Redirect} from 'react-router-dom';
-import '.../asserts/css/ChangePassword.css'
+import '../../asserts/css/ChangePassword.css'
 import {backendUrl} from './Common'
 import cookie from 'react-cookies'
 
