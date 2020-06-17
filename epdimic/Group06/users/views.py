@@ -446,7 +446,7 @@ def OnPermissionDenied(request: HttpRequest):
 
 
 # 封禁用户
-@group_required('superAdmin', 'admin-1', 'admin-2', 'admin-3', 'admin-4')
+@group_required('superAdmin', 'admin_1', 'admin_2', 'admin_3', 'admin_4','admin_5')
 @login_required
 def OnDeactivateUserRequest(request: HttpRequest):
     if showDebugLogs:

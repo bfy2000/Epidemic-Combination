@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route ,Redirect} from 'react-router-dom';
-import '../../asserts/css/ChangePassword.css'
+import '.../asserts/css/ChangePassword.css'
 import {backendUrl} from './Common'
 import cookie from 'react-cookies'
 
@@ -8,14 +8,14 @@ class ChangePassword extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            password:"",
+            new_password:"",
             flag:0,
         };
     }
 
     GetCode=(e)=>{
         this.setState({
-            password:e.target.value,
+            new_password:e.target.value,
         })
     }
 
@@ -24,14 +24,15 @@ class ChangePassword extends Component {
         var flag = 0;
 
         if(this.state.password!=""){
-            if(this.state.password.length<6||this.state.password.length>18){
+            if(this.state.new_password.length<6||this.state.new_password.length>18){
                 alert("密码必须在6到18位之间!");
                 flag = 1;
             }
         }
 
         if(flag === 0){
-            fetch(backendUrl+"user/profile/modify/",{
+
+            fetch(backendUrl+"user/profile/changepass/",{
                 method:"post",
                 body:JSON.stringify(this.state),
                 mode:"cors",
@@ -54,8 +55,14 @@ class ChangePassword extends Component {
         }
     }
 
+    Back=()=>{
+        this.setState({
+            flag:1,
+        })
+    }
+
     render() {
-        
+        if(this.state.flag === 0){
             return (
                 <div className = "ChangePassword">
                     <input type = "text" placeholder = {this.state.phone} ref = "phone" onChange = {(e)=>this.GetCode(e)}></input>
@@ -71,6 +78,9 @@ class ChangePassword extends Component {
                     </div>
                 </div>
             );
+        }else{
+            return <Redirect to = {{pathname:'/User/Change'}} />
+        }
     }
 }
 
