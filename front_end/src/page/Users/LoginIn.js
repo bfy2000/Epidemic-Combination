@@ -6,6 +6,7 @@ import '../../asserts/css/Info.css';
 import Title from './Title';
 import {backendUrl} from "./Common";
 import cookie from 'react-cookies'
+import Body from './Body';
 var storage=window.localStorage;
 
 class LoginIn extends Component {
@@ -79,6 +80,7 @@ class LoginIn extends Component {
                 <div>
                     <Title></Title>
                     <div className = "Logo_Login" style={{float:'left'}}>
+                        <Body></Body>
                     </div>
                     <div className = "Info_Login" style={{float:'left'}}>
                         <div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Zju from '.../asserts/image/timgXFIKOJKO.png'
+import Zju from '../../asserts/image/timgXFIKOJKO.png'
 
 class Body extends Component {
   constructor(props) {
