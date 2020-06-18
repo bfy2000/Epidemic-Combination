@@ -179,11 +179,14 @@ def OnUserAuthorizationRequest(request: HttpRequest):
     FailNumber = 0
     i = 0
     data = json.loads(request.body)
-    for groupName in data.keys:
+    for groupName in data.keys():
+        if groupName == "flag":
+            continue
+        i += 1
         targetUserName = data[groupName]
         if targetUserName == "":
+            msg += "%d. %s组 未提供目标用户 已跳过;\n" % (i, groupName)
             continue
-        i+=1
         if (groupName != "common") & (groupName != "admin_1") & (groupName != "admin_2") & (groupName != "admin_3") & (
                 groupName != "admin_4") & (groupName != "admin_5"):
             msg += "%d. 目标用户组 %s 不存在;\n" % (i, groupName)
@@ -407,6 +410,11 @@ def OnChangePassMailConfirmed(request: HttpRequest):
         # return redirect('http://127.0.0.1:8000/user/profile/changepass/set_new/' + new_token, request=request)
 
 
+@login_required
+@group_required('admin_1', 'superAdmin')
+def AuthTest(request: HttpRequest):
+    return HttpResponse("通过权限检测，访问成功")
+
 # 点了确认修改 实际去保存新的密码 并让用户重新登录
 # def OnConfirmNewPassword(request: HttpRequest):
 #     if showDebugLogs:
@@ -463,7 +471,7 @@ def OnPermissionDenied(request: HttpRequest):
 
 
 # 封禁用户
-@group_required('superAdmin', 'admin_1', 'admin_2', 'admin_3', 'admin_4','admin_5')
+@group_required('superAdmin', 'admin_1', 'admin_2', 'admin_3', 'admin_4', 'admin_5')
 @login_required
 def OnDeactivateUserRequest(request: HttpRequest):
     if showDebugLogs:
@@ -473,6 +481,7 @@ def OnDeactivateUserRequest(request: HttpRequest):
     return StateJsonRes(True, "")
 
 # 取消用户的某个分组
+
 
 
 def StateJsonRes(state: bool, msg: str, session_id=None, token=None):

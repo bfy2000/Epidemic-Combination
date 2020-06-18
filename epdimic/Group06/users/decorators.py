@@ -51,7 +51,7 @@ def user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIE
             if test_func(user):
                 return view_func(request, *args, **kwargs)
             path = request.build_absolute_uri()
-            login_url='../login'
+            login_url='../../login/'
             resolved_login_url = resolve_url(login_url or settings.LOGIN_URL)
             # If the login url is the same scheme and net location then just
             # use the path as the "next" url.
