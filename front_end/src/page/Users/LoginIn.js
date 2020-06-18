@@ -48,7 +48,6 @@ class LoginIn extends Component {
                 this.setState({
                     isLogin:result.isSuccess,
                 })
-
                 if(this.state.isLogin) {
                
                     storage.setItem("sessionid",result.session_id);

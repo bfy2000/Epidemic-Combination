@@ -15,6 +15,7 @@ import {AdminHomeIndex} from './page/supplies/pages/adminHome/index'
 import ChangePassword from './page/Users/ChangePassword';
 import RealChange from './page/Users/RealChange';
 import RealCreate from './page/Users/RealCreate';
+import SuperOperator from './page/Users/SuperOperator';
 
 
 import "./index.css";
@@ -46,6 +47,7 @@ class App extends Component {
 					<Route exact path = "/User/Change/ChangePassword" component = {ChangePassword}></Route>
 					<Route exact path = "/RealChange" component = {RealChange}></Route>
                   	<Route exact path = "/RealCreate" component = {RealCreate}></Route>
+					<Route exact path = "/SuperOperator" component = {SuperOperator}></Route>
 				</Switch>
 			</BrowserRouter>
 			</div>
