@@ -44,6 +44,10 @@ def user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIE
         @wraps(view_func)
         def _wrapped_view(request, *args, **kwargs):
             user = GetUserFromRequestSession(request)
+            if user.is_anonymous:
+                print(" 用户不存在")
+            else:
+                print(user.username, user.groups.values_list("name", flat=True), user.email)
             if test_func(user):
                 return view_func(request, *args, **kwargs)
             path = request.build_absolute_uri()
