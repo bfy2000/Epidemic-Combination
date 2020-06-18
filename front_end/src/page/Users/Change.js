@@ -108,7 +108,7 @@ class User extends Component {
             let upload = {};
             
             if(this.state.name!=used.name){
-                upload.name = this.state.name;
+                upload.username = this.state.name;
             }
             if(this.state.email!=used.email){
                 upload.email = this.state.email;
@@ -128,12 +128,7 @@ class User extends Component {
             })
                 .then(res => res.json())
                 .then((result)=>{
-                    console.log(this.result);
-                    if(result.isSuccess){
-                        alert("更改成功");
-                    }else{
-                        alert("更改失败");
-                    }
+                    alert(result.message);
                 },
             (error)=>{
                 console.log(error);
