@@ -15,42 +15,42 @@ class SuperOperator extends Component {
         super(props);
         this.state = {
             flag:1,
-            news:"",
-            travel:"",
-            check:"",
-            object:"",
-            back_to_work:"",
+            admin_1:"",
+            admin_2:"",
+            admin_3:"",
+            admin_4:"",
+            admin_5:"",
         };
     }
 
 
     GetNews=(e)=>{
         this.setState({
-            news:e.target.value,
+            admin_1:e.target.value,
         })
     }
 
     GetTravel=(e)=>{
         this.setState({
-            travel:e.target.value,
+            admin_2:e.target.value,
         })
     }
 
     GetIll=(e)=>{
         this.setState({
-            check:e.target.value,
+            admin_3:e.target.value,
         })
     }
 
     GetObject=(e)=>{
         this.setState({
-            object:e.target.value,
+            admin_4:e.target.value,
         })
     }
 
     GetRework=(e)=>{
         this.setState({
-            back_to_work:e.target.value,
+            admin_5:e.target.value,
         })
     }
 
