@@ -231,10 +231,9 @@ def report(request):
 
 def news_list(request, ori_type):
     val=1
-    print(ori_type)
-    if(ori_type == 'process'):  # 前端太难改，直接改后端分类型了
+    if(ori_type == 'process'):  # 后端分新闻类型返回
         val = 1
-    if(ori_type == 'knowledge'):
+    if(ori_type == 'knowledges'):
         val = 2
     if(ori_type == 'newest'):
         val = 3
@@ -252,7 +251,7 @@ def news_list(request, ori_type):
         news_item['news_gen_time'] = str(news.news_id.news_gen_time)
 
         newsinfo_list.append(news_item)
-    print(val)
+    print(Allnews)
     content = json.dumps(newsinfo_list)
     return HttpResponse(content, content_type="application/json")
 
