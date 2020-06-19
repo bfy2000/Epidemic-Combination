@@ -232,11 +232,11 @@ def report(request):
 def news_list(request, ori_type):
     val=1
     print(ori_type)
-    if(ori_type == 'junshi'):  # 前端太难改，直接改后端分类型了
+    if(ori_type == 'process'):  # 前端太难改，直接改后端分类型了
         val = 1
-    if(ori_type == 'guoji'):
+    if(ori_type == 'knowledge'):
         val = 2
-    if(ori_type == 'keji'):
+    if(ori_type == 'newest'):
         val = 3
     Allnews = models.NewsColumn.objects.filter(cl_id=val)
     newsinfo_list = []
