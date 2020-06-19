@@ -5,8 +5,8 @@ from django.contrib.auth.models import AbstractUser
 
 
 
-# 自定义的用户类
 class UserInfo(AbstractUser):
+    # 这个东西没啥用 用户组全部用group
     userRole = (
         ('v', 'visitor'),
         ('n', 'normal'),
@@ -31,8 +31,6 @@ class UserInfo(AbstractUser):
     role = models.CharField(max_length=20, choices=userRole)
     # 用户的身份证号
     citizen_id = models.CharField(max_length=18)
-
-    #########分割线####################################################
 
 
 # 新闻信息表
